@@ -1,37 +1,42 @@
-package classes;
+package classes.produto;
 
 public class ProdutoController {
-	private int id;
 	private String descricao;
-	
-	public ProdutoController(int id, String descricao) {
-		setId(id);
+	private int id;
+
+	@SuppressWarnings("unused")
+	private ProdutoController(String descricao) {
 		setDescricao(descricao);
 	}
 	
-	public int getId() {
-		return id;
+	public ProdutoController() {
+		
 	}
-	public void setId(int id) {
-		this.id = id;
-	}
+	
 	public String getDescricao() {
 		return descricao;
 	}
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("ProdutoController [id=");
-		builder.append(id);
-		builder.append(", descricao=");
+		builder.append("ProdutoController [descricao=");
 		builder.append(descricao);
+		builder.append(", id=");
+		builder.append(id);
 		builder.append("]");
 		return builder.toString();
 	}
-	
 	
 }

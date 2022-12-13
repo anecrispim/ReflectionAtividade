@@ -11,10 +11,9 @@ public class LoadClass {
 		this.resource = resource;
 	}
 
-
 	public Class<?> load() {
 		try {
-			Class<?> classT = Class.forName(""+resource);
+			Class<?> classT = Class.forName(resource);
 			return classT;
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
